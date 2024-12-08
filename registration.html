@@ -4,59 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - Karenina</title>
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <title>Registration Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <header>
-        <h1>Contact Me</h1>
+<body class="bg-gray-100">
+
+    <header class="bg-pink-600 text-white py-5 sticky top-0 z-10">
+        <h1 class="text-3xl text-center mb-4">Welcome to Karenina Website</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="about.html">👩‍💻 About</a></li>
-                <li><a href="myHoliday.html">🌴 My Holiday</a></li>
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">Home</a></li>
+                <li><a href="about.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">About</a>
+                </li>
+                <li><a href="contact.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">Contact</a></li>
+                <li><a href="portofolio.html" class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">My
+                        Portfolio</a></li>
+                <li><a href="kalkulator.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">Kalkulator</a></li>
             </ul>
         </nav>
     </header>
-    <main class="container">
-        <section class="main-content">
-            <h2>Follow Me on Social Media</h2>
-            <ul>
-                <li><a href="https://github.com/2382012" target="_blank">GitHub</a></li>
-                <li><a href="https://instagram.com/_Ikkerren" target="_blank">Instagram</a></li>
-            </ul>
 
-            <h3>Favorite Websites</h3>
-            <ul>
-                <li><a href="https://www.makeupartistchoice.com" target="_blank">Makeup Artist's Choice</a></li>
-                <li><a href="https://www.narscosmetics.com" target="_blank">NARS Cosmetics</a></li>
-                <li><a href="https://www.sephora.com" target="_blank">Sephora</a></li>
-                <li><a href="https://www.makeupartistchoice.com" target="_blank">Makeup Artist's Choice</a></li>
-                <li><a href="https://www.youtube.com/results?search_query=makeup+tutorials" target="_blank">YouTube
-                        Makeup Tutorials</a></li>
-            </ul>
+    <main class="max-w-7xl mx-auto p-6 bg-white shadow-xl rounded-xl mt-8">
+        <h2 class="text-2xl font-semibold text-center text-[#880e4f] mb-6">Registration Form</h2>
 
-            <h4>My University Links</h4>
-            <ul>
-                <li><a href="https://fti.unai.edu" target="_blank">FTI UNAI</a></li>
-                <li><a href="https://unai.edu" target="_blank">UNAI</a></li>
-            </ul>
-        </section>
+        <form id="registration-form" onsubmit="return validateForm(event)">
+            <div class="mb-4">
+                <label for="full-name" class="block text-gray-700 font-semibold">Full Name</label>
+                <input type="text" id="full-name" name="full_name" required maxlength="40"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#880e4f]">
+            </div>
 
-        <aside>
-            <h2>Contact Information</h2>
-            <ul>
-                <li><a href="https://instagram.com/_Ikkerren" target="_blank">Instagram</a></li>
-                <li><a href="https://github.com/2382012" target="_blank">GitHub</a></li>
-            </ul>
-        </aside>
+            <div class="mb-4">
+                <label for="phone-number" class="block text-gray-700 font-semibold">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone_number" required maxlength="15"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#880e4f]">
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-semibold">Email</label>
+                <input type="email" id="email" name="email" required
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#880e4f]">
+            </div>
+
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 font-semibold">Password</label>
+                <input type="password" id="password" name="password" required maxlength="16"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#880e4f]">
+            </div>
+
+            <div class="text-center">
+                <input type="submit" value="Register"
+                    class="w-full bg-[#880e4f] text-white p-3 rounded-md hover:bg-[#8e1f50] transition duration-300">
+            </div>
+        </form>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Karenina. All Rights Reserved.</p>
+    <footer class="bg-[#880e4f] text-white text-center py-4 mt-8">
+        <p>&copy; 2024 Your Website</p>
     </footer>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            const fullName = document.getElementById("full-name").value;
+            const phoneNumber = document.getElementById("phone-number").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const phoneRegex = /^\d{10,15}$/;
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$/;
+
+            if (fullName.length > 40) {
+                alert("Full Name must be less than or equal to 40 characters.");
+                return false;
+            }
+
+            if (!phoneRegex.test(phoneNumber)) {
+                alert("Phone Number must be numeric and between 10 to 15 digits.");
+                return false;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!passwordRegex.test(password)) {
+                alert("Password must be between 8-16 characters, include at least one uppercase letter, one lowercase letter, and one number.");
+                return false;
+            }
+
+            alert("Registration Successful");
+            return true; // Submit form
+        }
+    </script>
+
 </body>
 
 </html>

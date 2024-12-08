@@ -4,61 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Website Karenina</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>About Me - Karenina's Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 
-<body>
-    <header>
-        <h1>Website Karenina</h1>
+<body class="bg-gray-100">
+    <<header class="bg-pink-600 text-white py-5 sticky top-0 z-10">
+        <h1 class="text-3xl text-center mb-4">Welcome to Karenina Website</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="myHoliday.html">🌴 My Holiday</a></li>
-                <li><a href="registration.html">📞 Contact</a></li>
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">Home</a></li>
+                <li><a href="portofolio.html" class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">My
+                        Portfolio</a>
+                </li>
+                <li><a href="contact.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">Contact</a></li>
+                <li><a href="registration.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">Registration</a></li>
+                <li><a href="kalkulator.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">Kalkulator</a></li>
             </ul>
         </nav>
-    </header>
+        </header>
 
-    <main>
-        <section>
-            <h2>👩‍🎓 About Me</h2>
-            <img src="karen_cantik.jpg" alt="Karenina's Profile Picture" width="450px">
-            <p>👤 Name: Karenina Koreludji</p>
-            <p>🎉 Date of Birth: April 13, 2004</p>
-            <p>🎓 Major: Information Systems</p>
-            <p>ID: 2382012</p>
-            <h3>🌟 Biography 🌟</h3>
-            <p>Born on April 13, 2004, I am a passionate individual currently pursuing a degree in Information Systems.
-                From a young age, I have always been fascinated by technology and how it can be used to solve real-world
-                problems. In addition to my studies, I enjoy web development, where I can express my creativity and
-                technical skills.</p>
-            <p>Some of my hobbies include:</p>
-            <ul>
-                <li>🎤 Singing</li>
-                <li>💄 Makeup</li>
-                <li>📺 Watching drama films</li>
-            </ul>
-            <p>I also love listening to music and exploring new makeup techniques in my free time. My goal is to combine
-                my interests in technology and design to create impactful projects that inspire others.</p>
-            <h4>🎓 Education</h4>
-            <ul>
-                <li>Elementary School</li>
-                <li>Middle School</li>
-                <li>High School</li>
-            </ul>
-        </section>
+        <main class="flex flex-col lg:flex-row justify-start gap-6 p-4 max-w-7xl mx-auto">
+            <section class="bg-[#f48fb1] p-7 rounded-xl shadow-md fade-in flex-1 lg:ml-[25%]">
+                <h2 class="text-[#880e4f] text-xl font-bold mb-4">👩‍🎓 About Me</h2>
+                <div class="flex flex-col md:flex-row gap-4 items-start">
+                    <div class="flex-shrink-0 text-center">
+                        <img src="karen_cantik.jpg" alt="Karenina's Profile Picture"
+                            class="w-full max-w-[300px] h-auto rounded-lg">
+                    </div>
+                    <div class="flex-1 text-[#880e4f]">
+                        <div class="text-[#880e4f] text-left mt-3">
+                            <p class="mb-3 text-sm">👤 <span class="font-bold">Name:</span> Karenina Koreludji</p>
+                            <p class="mb-3 text-sm">🎉 <span class="font-bold">Date of Birth:</span> April 13, 2004</p>
+                            <p class="mb-3 text-sm">🎓 <span class="font-bold">Major:</span> Information Systems</p>
+                            <p class="mb-3 text-sm">🆔 <span class="font-bold">ID:</span> 2382012</p>
+                        </div>
+                        <h3 class="text-sm font-semibold mb-3">🌟 Biography 🌟</h3>
+                        <p class="mb-3 text-sm">
+                            Born on April 13, 2004, I am a passionate individual currently pursuing a degree in
+                            Information
+                            Systems. From a young age, I have always been fascinated by technology and how it can solve
+                            real-world problems. Besides my studies, I enjoy web development, combining creativity with
+                            technical
+                            skills.
+                        </p>
+                        <p class="mb-3 text-sm">Some of my hobbies include:</p>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>🎤 Singing</li>
+                            <li>💄 Makeup</li>
+                            <li>📺 Watching drama films</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <aside class="bg-[#fce4ec] p-4 rounded-xl shadow-md lg:w-1/4">
+                <h4 class="text-[#880e4f] text-sm font-semibold mb-3">Fun Fact</h4>
+                <p class="text-[#6a1b9a] text-sm">
+                    I love experimenting with makeup looks while coding, blending creativity with technology!
+                </p>
+            </aside>
+        </main>
 
-        <aside>
-            <h4>Fun Fact</h4>
-            <p>I love experimenting with makeup looks while coding, blending creativity with technology!</p>
-        </aside>
-    </main>
+        <footer class="bg-[#880e4f] text-white text-center py-5 mt-12">
+            <p>&copy; 2024 Karenina Koreludji. All rights reserved.</p>
+        </footer>
 
-    <footer>
-        <p>&copy; 2024 Karenina Koreludji. All rights reserved.</p>
-    </footer>
+        <script>
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            const header = document.querySelector("header");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    header.classList.add("shadow-2xl");
+                } else {
+                    header.classList.remove("shadow-2xl");
+                }
+            });
+        </script>
 </body>
 
 </html>

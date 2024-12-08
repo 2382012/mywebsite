@@ -5,47 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Karenina's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 
-<body>
-    <header>
-        <h1>Welcome to Karenina's Website</h1>
+<body class="bg-gray-100">
+    <header class="bg-pink-600 text-white py-5 sticky top-0 z-10">
+        <h1 class="text-3xl text-center mb-4">Welcome to Karenina Website</h1>
         <nav>
-            <ul>
-                <li><a href="about.html">👩‍💻 About</a></li>
-                <li><a href="myHoliday.html">🌴 My Holiday</a></li>
-                <li><a href="registration.html">📞 Contact</a></li>
+            <ul class="flex justify-center space-x-6">
+                <li><a href="about.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">About</a>
+                </li>
+                <li><a href="portofolio.html" class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">My
+                        portofolio</a></li>
+                <li><a href="contact.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">Contact</a></li>
+                <li><a href="registration.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">Registration</a></li>
+                <li><a href="kalkulator.html"
+                        class="hover:bg-[#880e4f] px-4 py-2 rounded-md transition duration-300">Kalkulator</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>👋 Hello, I'm Karenina Koreludji</h2>
-            <img src="karen_cantik.jpg" alt="Karenina's Profile Picture"
-                style="width: 100%; max-width: 400px; height: auto; border-radius: 10px;">
-            <p>
-                Welcome to my personal website! I'm a passionate web developer and a student majoring in Information
-                Systems. I love creating beautiful and functional websites, experimenting with new technologies, and
-                exploring the world of design.
-            </p>
-            <p>
-                This portfolio showcases my journey, skills, and some of the projects I've worked on. Feel free to
-                explore and reach out if you have any questions or opportunities!
-            </p>
+    <main class="flex flex-col lg:flex-row justify-start gap-6 p-4 max-w-7xl mx-auto">
+        <section class="bg-[#f48fb1] p-7 rounded-xl shadow-md fade-in flex-1 lg:ml-[25%]">
+            <h2 class="text-[#880e4f] text-xl font-bold mb-4">👋 Hello, I'm Karenina Koreludji</h2>
+            <div class="flex flex-col md:flex-row gap-4 items-start">
+                <div class="flex-shrink-0 text-center">
+                    <img src="karen_cantik.jpg" alt="Karenina's Profile Picture"
+                        class="w-full max-w-[300px] h-auto rounded-lg">
+                </div>
+                <div class="flex-1 text-[#880e4f]">
+                    <p class="text-sm mb-3">Welcome to my personal website! I'm a passionate web developer showcasing my
+                        journey, skills, and projects.</p>
+                </div>
+            </div>
         </section>
 
-        <aside>
-            <h4>Quick Facts</h4>
-            <p>I am currently learning full-stack web development and I enjoy doing makeup in my free time.</p>
+        <aside class="bg-[#fce4ec] p-4 rounded-xl shadow-md lg:w-1/4">
+            <h4 class="text-[#880e4f] text-sm font-semibold mb-3">Quick Facts</h4>
+            <p class="text-[#6a1b9a] text-sm">I am currently learning full-stack web development and enjoy doing makeup
+                in my free time.</p>
         </aside>
     </main>
 
-    <footer>
+    <footer class="bg-[#880e4f] text-white text-center py-5 mt-12">
         <p>&copy; 2024 Karenina Koreludji. All rights reserved.</p>
     </footer>
+
+    <script>
+        const header = document.querySelector("header");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                header.classList.add("shadow-2xl");
+            } else {
+                header.classList.remove("shadow-2xl");
+            }
+        });
+    </script>
 </body>
 
 </html>
